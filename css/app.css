@@ -1,0 +1,197 @@
+/* public/css/app.css */
+
+/* Reset some default styles */
+body {
+    margin: 0;
+    padding: 0;
+}
+
+/* Styling for the navigation bar */
+nav {
+    background-image: linear-gradient(to right, #544EC6, #50C878);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center; /* Center vertically */
+    height: 80px; /* Adjust height to accommodate the logo height */
+    padding: 0 20px;
+}
+
+.logo img {
+    width: 40px; /* Adjust the logo height as needed */
+    /* You can add more styling for the logo image if desired */
+}
+
+.slogan {
+    font-size: 1.2rem; /* Adjust the font size of the slogan as needed */
+    color: #fff; /* Set the text color of the slogan */
+    font-weight: bold;
+    padding: 0 10px;
+}
+
+/* Initial height for the navbar */
+nav.navbar-scroll {
+    height: 80px;
+    display: flex; /* Use flexbox to center the buttons horizontally */
+    align-items: center; /* Center the buttons vertically */
+    justify-content: center; /* Center the buttons horizontally */
+    transition: height 0.4s; /* Add a smooth transition effect */
+}
+
+/* Modified height for the navbar when scrolled down */
+nav.navbar-scroll.navbar-scrolled {
+    height: 45px; /* Set the desired height when scrolled */
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-left: auto;
+    height: 75px; /* This height should match the initial height above */
+}
+
+nav li {
+    margin-right: 16px;
+}
+
+nav a {
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 8px 9px;
+    border-radius: 2px;
+    transition: background-color 0.3s ease; /* Add transition for background-color */
+}
+
+nav a:hover {
+    background-color: #544EC6;
+    color: #ECFFDC;
+    text-decoration: none;
+}
+
+/* Add a class to highlight the active link */
+nav .active {
+    background-color: #333;
+    color: #fff;
+}
+
+.logo-container {
+    position: absolute;
+    top: 80px;
+    left: 20px;
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 8px 12px;
+    border-radius: 4px;
+    z-index: 2;
+}
+
+.logo-container img {
+    width: 150px; /* Adjust the width as needed */
+    height: 150px; /* Maintain the aspect ratio of the image */
+}
+
+.buttn {
+    background-color: #544EC6;
+    color: #fff;
+    text-decoration: none;
+    font-size: 3rem;
+    font-weight: bold;
+    padding: 17px 100px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease; /* Add transition for background-color */
+}
+
+.buttn:hover {
+    background-color: #98FB98;
+    text-decoration: none;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Add a class to style the larger section */
+.large-section {
+    height: 100vh;
+    display: flex;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url('images/hme-bkg.jpg');
+    justify-content: center;
+    align-items: center;
+}
+
+.large-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 107%;
+    background-color: rgba(0, 0, 0, 0.792);
+    z-index: 1; /* Ensure the overlay appears on top of the background image */
+}
+
+.mid-container {
+    color: #fff;
+    display: flex;
+    background-color: #333;
+    justify-content: center;
+    align-items: center;
+}
+
+p {
+    font-size: 1.8rem;
+    font-family: 'Helvetica', sans-serif;
+}
+
+.hme_header {
+    font-size: 7rem;
+    color: #fff;
+    font-weight: bold;
+    z-index: 2;
+}
+
+/* Add a class for the animation */
+.animate {
+    animation: fadeInUp 1s ease;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.content-container {
+    text-align: center; /* Center the content horizontally */
+    max-width: 1100px; /* Adjust this value based on your design preferences */
+    margin: 0 auto; /* Center the container within the section */
+    z-index: 2;
+}
+
+/* Styles for the logo on mobile view (screens smaller than or equal to small) */
+@media (max-width: 576px) {
+    .logo-container.logo .logo-img {
+        width: 60px; /* Adjust the size as needed */
+        height: 60px;
+    }
+}
+
+@media (max-width: 576px) {
+    .slogan {
+        font-size: 1rem;
+    }
+}
